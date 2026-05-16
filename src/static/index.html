@@ -7,9 +7,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+    <header class="site-header">
+      <div class="header-copy">
+        <p class="eyebrow">Mergington High School</p>
+        <h1>Extracurricular Activities</h1>
+        <p class="header-subtitle">Students can browse activities. Teachers can log in to manage enrollments.</p>
+      </div>
+
+      <div class="auth-panel">
+        <button id="auth-toggle" class="auth-toggle" type="button">Account</button>
+        <div id="auth-menu" class="auth-menu hidden">
+          <p id="auth-summary" class="auth-summary">Signed out as student</p>
+
+          <form id="login-form" class="auth-form">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" required autocomplete="username" placeholder="club_admin" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" required autocomplete="current-password" placeholder="••••••••" />
+            </div>
+            <button type="submit">Log in</button>
+          </form>
+
+          <button id="logout-button" class="secondary-button hidden" type="button">Log out</button>
+          <div id="auth-message" class="hidden"></div>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -23,6 +48,7 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="signup-locked" class="locked-state">Log in as a club or federation admin to register and unregister students.</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
