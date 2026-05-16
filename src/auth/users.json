@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "username": "club_admin",
+      "password": "club-123",
+      "role": "club_admin"
+    },
+    {
+      "username": "federation_admin",
+      "password": "fed-123",
+      "role": "federation_admin"
+    }
+  ]
+}

@@ -12,20 +12,81 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef2f8 100%);
 }
 
-header {
-  text-align: center;
-  padding: 20px 0;
+.site-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: #1a237e;
   color: white;
-  border-radius: 5px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(18, 32, 96, 0.18);
 }
 
-header h1 {
-  margin-bottom: 10px;
+.header-copy {
+  max-width: 720px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #dbe3ff;
+}
+
+.site-header h1 {
+  margin-bottom: 8px;
+}
+
+.header-subtitle {
+  color: #dbe3ff;
+}
+
+.auth-panel {
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.auth-toggle,
+.secondary-button {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.auth-toggle:hover,
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-menu {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.auth-summary {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.auth-form {
+  margin-bottom: 12px;
+}
+
+.auth-form button {
+  width: 100%;
 }
 
 main {
@@ -44,7 +105,7 @@ main {
 section {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
@@ -192,9 +253,29 @@ button:hover {
   display: none;
 }
 
+.locked-state {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #eef3ff;
+  color: #283593;
+  border: 1px solid #c9d2ff;
+}
+
 footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .auth-panel {
+    align-items: stretch;
+  }
 }
